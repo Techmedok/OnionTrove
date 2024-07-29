@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Sign In | Appline Tailwind App Landing Template</title>
+      <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon"/>
+      <link rel="stylesheet" href="{{ url_for('serve_static', filename='css/tailwind.css') }}"/>
+   </head>
+   <body class="a1 dark:a2">
+      <main>
+         <section class="a1t[150px] a1u[110px] lg:a1t[220px]">
+            <div class="ab a1v lg:ad[1250px]">
+               <div class="wow fadeInUp a1w a7 ad[520px] a14 a1e[#F8FAFB] a3E a1n a19 dark:a1e[#15182A] dark:a1f sm:a3A[50px]" data-wow-delay=".2s">
+                  <div class="a2g ae af a2E a1p a3u a8 a1 a3N a1r[10px] dark:aa dark:a2Q"> <a href="#" class="ah a7 a2u a1q a48 aF aR aS aV hover:a1s"> Sign In </a> <a href="{{ url_for('register') }}" class="ah a7 a2u a48 aF aR aS aT hover:a1q hover:aV dark:aV"> Sign Up </a> </div>
+                  <div class="aF">
+                     <h3 class="a1z[10px] a2p at aT dark:aV sm:a1A[28px]"> Sign in to your account </h3>
+                     <p>
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                           
+                                {% for message in messages %}
+                                    <span>{{ message }}</span>
+                                {% endfor %}
+                            
+                        {% endif %}
+                    {% endwith %}
+                     
+                     </p>
+                </p>
+                  </div>
+                  <form method="post" action="{{ url_for('login') }}">
+                     {{ form.csrf_token }}
+                     <div class="a2d"> <label for="email" class="a1z[10px] ah a2C aT dark:aV"> Your Email </label> 
+                     {{ form.username(class="form-control a7 a1p a3u a8 a1 a1D a1n aR aS a1B a45 focus:a46 focus:a4c dark:aa dark:a2 dark:aV dark:focus:a46", placeholder="Enter your username") }}
+                  </div>
+                     <div class="a2n"> <label for="password" class="a1z[10px] ah a2C aT dark:aV"> Your password </label> 
+                     {{ form.password(class="form-control a7 a1p a3u a8 a1 a1D a1n aR aS a1B a45 focus:a46 focus:a4c dark:aa dark:a2 dark:aV dark:focus:a46", placeholder="Enter your password") }}
+                  </div>
+                     {{ form.submit(class="ae a7 ar a1p a1q a49 aR aS aV hover:a1s") }}
+                  </form>
+                   
+               </div>
+            </div>
+         </section>
+      </main>
+   </body>
+</html>

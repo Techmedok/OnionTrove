@@ -1,0 +1,206 @@
+<html lang=en>
+   <head>
+      <meta charset=UTF-8>
+      <meta content="IE=edge"http-equiv=X-UA-Compatible>
+      <meta content="width=device-width,initial-scale=1"name=viewport>
+      <title>Onion Trove - Keywords</title>
+      <link href="{{ url_for('serve_static', filename='images/favicon.png') }}" rel=icon>
+      <link href="{{ url_for('serve_static', filename='css/style.css') }}" rel=stylesheet>
+      <link rel="stylesheet" href="{{ url_for('serve_static', filename='css/tailwind.css') }}" />
+      <link href="https://fa6p.pages.dev/css/all.min.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body :class="{'b yn mj': darkMode === true}" x-data="{ page: 'analytics', 'loaded': true, 'darkMode': true, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false }" x-init="
+      darkMode = JSON.parse(localStorage.getItem('darkMode'));
+      $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
+      <div class=nh>
+         <aside :class="sidebarToggle && 'zf ph'"class="ip -ud-translate-x-full _e _u bv dp f hp l nj oa ou q qo u xr">
+            <button class="g bj nj wr xr ni -ud-right-9.5 _k jc pa qh uo vu"@click="sidebarToggle = !sidebarToggle":class="sidebarToggle && 'ga'"><span class="jc h bf cg sd"><span class="g m du-block vc yd"><span class="jc cs fp gp uj zh q td cf h r ya yo":class="{ 'df zo': !sidebarToggle }"></span> <span class="jc cs fp gp uj zh q td cf h r ya _o":class="{ 'df gw': !sidebarToggle }"></span> <span class="jc cs fp gp uj zh q td cf h r ya ap":class="{ 'df bp': !sidebarToggle }"></span> </span><span class="g m du-block vc yd _f"><span class="g jc cs fp gp uj zh ef ha r vc zo":class="{ 'ud yo': !sidebarToggle }"></span> <span class="g yd cs fp gp gw ia jc q td uj zh":class="{ 'ud hw': !sidebarToggle }"></span></span></span></button>
+            <nav class="ru fv gc ml rl"x-data="{selected: 'Dashboard'}"x-init="
+               selected = JSON.parse(localStorage.getItem('selected'));
+               $watch('selected', value => localStorage.setItem('selected', JSON.stringify(value)))">
+               <ul class="lc hg bh">
+               <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq" href="../dashboard">
+                        <i class="fa-solid fa-house"></i> Dashboard
+                     </a>
+                  <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq eo oj">
+                        <i class="fa-solid fa-square-k"></i> Keywords
+                     </a>
+                  <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq" href="../dorker">
+                        <i class="fas fa-tornado"></i> Dorker
+                     </a>
+                  <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq" href="../onionlinksextractor">
+                     <i class="fa-light fa-onion"></i> Onion Link Extractor
+                     </a>
+                  <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq" href="../document-upload/">
+                        <i class="fa-solid fa-file-import"></i> Import Links
+                     </a>
+                  <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq" href="../verification/">
+                        <i class="fa-solid fa-rectangle-vertical-history"></i> Web Scraper
+                     </a>
+                  <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq" href="../verification/">
+                        <i class="fa-solid fa-images"></i> Image Intelligence
+                     </a>
+                  <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq" href="../verification/">
+                        <i class="fa-solid fa-server"></i> Database
+                     </a>
+                  <li>
+                     <a class="lc mg qh h nr dp gp rl sg un _q nl qq" href="../logout/">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                     </a>
+               </ul>
+            </nav>
+         </aside>
+         <header :class="{ 'iw' : stickyMenu }"@scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"class="lc dp f hp nj oa q r xr yd">
+            <div class="lc mg ml qo rl fv rv yu" style="padding-top: 30px;">
+               <a class="lc mg zg"href=index.html>
+                  <img alt=Logo src="{{ url_for('serve_static', filename='images/logo/icon-light.svg') }}" class=vr> <img alt=Logo src="{{ url_for('serve_static', filename='images/logo/icon-dark.svg') }}" class="pc ur"> 
+                  <span class="gs lo pc tu">
+                     <svg fill=none  class=hk width="120" viewBox="0 0 90 37.5" height="50" preserveAspectRatio="xMidYMid meet"><defs><g/></defs><g fill="" ><g transform="translate(4.469232, 16.326695)"><g><path d="M 7.976562 0.214844 C 12.59375 0.214844 15.972656 -3.273438 15.972656 -7.847656 C 15.972656 -11.996094 13.171875 -15.183594 8.875 -15.183594 C 4.296875 -15.183594 0.855469 -11.484375 0.855469 -6.929688 C 0.855469 -2.714844 3.976562 0.214844 7.976562 0.214844 Z M 9.171875 -1.6875 C 6.136719 -1.6875 4.320312 -5.601562 4.320312 -9.046875 C 4.320312 -11.460938 5.410156 -13.472656 7.761719 -13.472656 C 10.714844 -13.472656 12.550781 -9.515625 12.550781 -6.03125 C 12.550781 -3.59375 11.613281 -1.6875 9.171875 -1.6875 Z M 9.171875 -1.6875 "/></g></g></g><g fill="" ><g transform="translate(21.353681, 16.326695)"><g><path d="M 11.976562 -6.117188 C 11.976562 -8.746094 10.820312 -10.476562 8.125 -10.476562 C 6.90625 -10.476562 5.558594 -9.984375 4.660156 -8.851562 L 4.660156 -9.75 C 4.660156 -10.222656 4.511719 -10.476562 4.128906 -10.476562 C 3.761719 -10.457031 2.136719 -9.984375 1.304688 -9.601562 C 0.792969 -9.367188 0.597656 -9.195312 0.597656 -8.808594 C 0.597656 -8.46875 0.8125 -8.296875 0.984375 -8.148438 C 1.347656 -7.847656 1.648438 -7.527344 1.648438 -6.992188 L 1.648438 -3.035156 C 1.648438 -1.089844 0.597656 -1.625 0.597656 -0.621094 C 0.597656 -0.148438 0.960938 0 1.625 0 L 5.089844 0 C 5.6875 0 6.074219 -0.105469 6.074219 -0.597656 C 6.074219 -1.625 5.003906 -1.089844 5.003906 -3.035156 L 5.003906 -5.921875 C 5.003906 -7.503906 5.796875 -8.425781 6.863281 -8.425781 C 8.191406 -8.425781 8.617188 -7.25 8.617188 -5.753906 L 8.617188 -3.035156 C 8.617188 -1.089844 7.546875 -1.625 7.546875 -0.621094 C 7.546875 -0.148438 7.933594 0 8.597656 0 L 12.0625 0 C 12.660156 0 13.023438 -0.105469 13.023438 -0.597656 C 13.023438 -1.625 11.976562 -1.089844 11.976562 -3.035156 Z M 11.976562 -6.117188 "/></g></g></g><g fill="" ><g transform="translate(34.839873, 16.326695)"><g><path d="M 2.652344 -11.441406 C 3.890625 -11.441406 5.152344 -12.46875 5.175781 -13.664062 C 5.175781 -14.5 4.492188 -15.117188 3.636719 -15.117188 C 2.417969 -15.140625 1.199219 -13.964844 1.199219 -12.851562 C 1.175781 -12.101562 1.710938 -11.441406 2.652344 -11.441406 Z M 1.667969 -3.035156 C 1.667969 -1.089844 0.597656 -1.625 0.597656 -0.621094 C 0.597656 -0.148438 0.984375 0 1.625 0 L 5.089844 0 C 5.710938 0 6.074219 -0.105469 6.074219 -0.597656 C 6.074219 -1.625 5.023438 -1.089844 5.023438 -3.035156 L 5.023438 -6.800781 L 5.046875 -9.730469 C 5.046875 -10.222656 4.898438 -10.476562 4.492188 -10.457031 C 4.148438 -10.457031 2.203125 -9.816406 1.347656 -9.410156 C 0.832031 -9.171875 0.640625 -9.023438 0.640625 -8.683594 C 0.640625 -8.039062 1.648438 -8.082031 1.648438 -6.800781 Z M 1.667969 -3.035156 "/></g></g></g><g fill="" ><g transform="translate(41.422668, 16.326695)"><g><path d="M 5.710938 0.214844 C 9.171875 0.214844 11.71875 -2.222656 11.71875 -5.472656 C 11.71875 -8.296875 9.707031 -10.476562 6.714844 -10.476562 C 3.273438 -10.476562 0.683594 -7.910156 0.683594 -4.726562 C 0.683594 -1.6875 2.886719 0.214844 5.710938 0.214844 Z M 6.757812 -1.390625 C 5.089844 -1.390625 3.957031 -3.914062 3.957031 -6.265625 C 3.957031 -7.527344 4.296875 -8.917969 5.644531 -8.917969 C 7.335938 -8.917969 8.425781 -6.160156 8.425781 -3.785156 C 8.425781 -2.585938 8.039062 -1.390625 6.757812 -1.390625 Z M 6.757812 -1.390625 "/></g></g></g><g fill="" ><g transform="translate(53.840217, 16.326695)"><g><path d="M 11.976562 -6.117188 C 11.976562 -8.746094 10.820312 -10.476562 8.125 -10.476562 C 6.90625 -10.476562 5.558594 -9.984375 4.660156 -8.851562 L 4.660156 -9.75 C 4.660156 -10.222656 4.511719 -10.476562 4.128906 -10.476562 C 3.761719 -10.457031 2.136719 -9.984375 1.304688 -9.601562 C 0.792969 -9.367188 0.597656 -9.195312 0.597656 -8.808594 C 0.597656 -8.46875 0.8125 -8.296875 0.984375 -8.148438 C 1.347656 -7.847656 1.648438 -7.527344 1.648438 -6.992188 L 1.648438 -3.035156 C 1.648438 -1.089844 0.597656 -1.625 0.597656 -0.621094 C 0.597656 -0.148438 0.960938 0 1.625 0 L 5.089844 0 C 5.6875 0 6.074219 -0.105469 6.074219 -0.597656 C 6.074219 -1.625 5.003906 -1.089844 5.003906 -3.035156 L 5.003906 -5.921875 C 5.003906 -7.503906 5.796875 -8.425781 6.863281 -8.425781 C 8.191406 -8.425781 8.617188 -7.25 8.617188 -5.753906 L 8.617188 -3.035156 C 8.617188 -1.089844 7.546875 -1.625 7.546875 -0.621094 C 7.546875 -0.148438 7.933594 0 8.597656 0 L 12.0625 0 C 12.660156 0 13.023438 -0.105469 13.023438 -0.597656 C 13.023438 -1.625 11.976562 -1.089844 11.976562 -3.035156 Z M 11.976562 -6.117188 "/></g></g></g><g fill="" ><g transform="translate(5.855862, 35.952842)"><g><path d="M 8.765625 -12.425781 C 8.765625 -13 9.066406 -13.320312 9.621094 -13.320312 C 10.90625 -13.320312 11.375 -12.507812 12.144531 -10.96875 C 12.402344 -10.476562 12.617188 -10.199219 12.957031 -10.199219 C 13.429688 -10.199219 13.558594 -10.605469 13.535156 -11.246094 C 13.492188 -12.507812 13.363281 -13.386719 13.195312 -14.007812 C 13.023438 -14.691406 12.660156 -14.96875 11.375 -14.96875 L 2.609375 -14.96875 C 1.347656 -14.96875 0.984375 -14.691406 0.792969 -14.007812 C 0.621094 -13.386719 0.492188 -12.507812 0.449219 -11.246094 C 0.425781 -10.585938 0.554688 -10.199219 1.027344 -10.199219 C 1.367188 -10.199219 1.605469 -10.476562 1.839844 -10.96875 C 2.628906 -12.507812 3.078125 -13.300781 4.363281 -13.300781 C 4.960938 -13.300781 5.238281 -13 5.238281 -12.425781 L 5.238281 -3.804688 C 5.238281 -1.199219 3.761719 -1.839844 3.761719 -0.683594 C 3.761719 -0.171875 4.105469 0 5.023438 0 L 8.9375 0 C 9.902344 0 10.199219 -0.171875 10.199219 -0.683594 C 10.199219 -1.839844 8.765625 -1.199219 8.765625 -3.804688 Z M 8.765625 -12.425781 "/></g></g></g><g fill="" ><g transform="translate(19.83363, 35.952842)"><g><path d="M 7.570312 -10.476562 C 6.628906 -10.476562 5.515625 -9.984375 4.660156 -8.703125 L 4.660156 -9.75 C 4.660156 -10.222656 4.511719 -10.476562 4.128906 -10.476562 C 3.761719 -10.457031 2.136719 -9.984375 1.304688 -9.601562 C 0.792969 -9.367188 0.597656 -9.195312 0.597656 -8.808594 C 0.597656 -8.46875 0.8125 -8.296875 1.003906 -8.148438 C 1.347656 -7.847656 1.667969 -7.527344 1.667969 -6.992188 L 1.667969 -3.035156 C 1.667969 -1.089844 0.597656 -1.625 0.597656 -0.621094 C 0.597656 -0.148438 0.984375 0 1.625 0 L 5.089844 0 C 5.710938 0 6.074219 -0.105469 6.074219 -0.597656 C 6.074219 -1.625 5.023438 -1.089844 5.023438 -3.035156 L 5.023438 -5.988281 C 5.023438 -7.378906 5.625 -8.0625 6.308594 -8.0625 C 7.378906 -8.0625 7.335938 -6.863281 8.425781 -6.863281 C 9.109375 -6.863281 9.578125 -7.464844 9.578125 -8.445312 C 9.578125 -9.644531 8.894531 -10.476562 7.570312 -10.476562 Z M 7.570312 -10.476562 "/></g></g></g><g fill="" ><g transform="translate(29.985679, 35.952842)"><g><path d="M 5.710938 0.214844 C 9.171875 0.214844 11.71875 -2.222656 11.71875 -5.472656 C 11.71875 -8.296875 9.707031 -10.476562 6.714844 -10.476562 C 3.273438 -10.476562 0.683594 -7.910156 0.683594 -4.726562 C 0.683594 -1.6875 2.886719 0.214844 5.710938 0.214844 Z M 6.757812 -1.390625 C 5.089844 -1.390625 3.957031 -3.914062 3.957031 -6.265625 C 3.957031 -7.527344 4.296875 -8.917969 5.644531 -8.917969 C 7.335938 -8.917969 8.425781 -6.160156 8.425781 -3.785156 C 8.425781 -2.585938 8.039062 -1.390625 6.757812 -1.390625 Z M 6.757812 -1.390625 "/></g></g></g><g fill="" ><g transform="translate(42.403228, 35.952842)"><g><path d="M 9.28125 -10.265625 C 8.660156 -10.265625 8.296875 -10.15625 8.296875 -9.664062 C 8.296875 -8.726562 9.453125 -9.132812 8.808594 -7.335938 L 7.164062 -2.867188 L 5.410156 -7.355469 C 4.726562 -9.132812 5.921875 -8.726562 5.921875 -9.664062 C 5.921875 -10.113281 5.539062 -10.265625 4.875 -10.265625 L 1.199219 -10.265625 C 0.597656 -10.265625 0.214844 -10.15625 0.214844 -9.664062 C 0.214844 -8.726562 1.15625 -9.132812 1.839844 -7.355469 L 4.535156 -0.535156 C 4.769531 0.0859375 5.109375 0.320312 6.4375 0 C 7.65625 -0.277344 7.804688 -0.535156 8.019531 -1.113281 L 10.351562 -7.355469 C 11.035156 -9.132812 11.953125 -8.726562 11.953125 -9.664062 C 11.953125 -10.113281 11.589844 -10.265625 10.925781 -10.265625 Z M 9.28125 -10.265625 "/></g></g></g><g fill="" ><g transform="translate(54.564313, 35.952842)"><g><path d="M 10.839844 -5.644531 C 11.054688 -8.511719 9.214844 -10.476562 6.265625 -10.476562 C 3.378906 -10.476562 0.683594 -8.191406 0.683594 -4.941406 C 0.683594 -1.902344 2.757812 0.214844 5.859375 0.214844 C 8.746094 0.214844 10.285156 -1.390625 10.691406 -2.652344 C 10.90625 -3.316406 10.476562 -3.679688 9.984375 -3.273438 C 9.257812 -2.652344 8.53125 -2.160156 7.292969 -2.160156 C 5.558594 -2.160156 4.277344 -3.1875 4.019531 -4.917969 L 10.199219 -5.046875 C 10.5625 -5.046875 10.820312 -5.261719 10.839844 -5.644531 Z M 4.554688 -6.328125 C 4.019531 -6.328125 3.957031 -6.371094 3.957031 -6.800781 C 3.957031 -7.742188 4.660156 -8.960938 5.945312 -8.960938 C 7.097656 -8.960938 7.847656 -8.0625 7.871094 -7.015625 C 7.871094 -6.4375 7.828125 -6.371094 7.378906 -6.371094 Z M 4.554688 -6.328125 "/></g></g></g></svg>
+                  </span>
+               </a>
+            </div>
+            <div class="lc mg ml qo rl 2xl:ud-px-11 _s hu og xf">
+               <div class="pc rs">
+
+               </div>
+               <div class="lc mg _g">
+                  <ul class="lc mg vg">
+                     <li><label class="jc h ua"><input class="g yd vc cg oo r ra ua":value=darkMode @change="darkMode = !darkMode" type=checkbox> <img alt=Sun src="{{ url_for('serve_static', filename='images/icon/icon-sun.svg') }}" class=vr> <img alt=Moon src="{{ url_for('serve_static', filename='images/icon/icon-moon.svg') }}" class="pc ur"></label>
+                  </ul>
+                  <div class=h x-data="{ dropdownOpen: false }"@click.outside="dropdownOpen = false">
+                     <a class="lc mg vg"href=index.html# @click.prevent="dropdownOpen = ! dropdownOpen">
+                        <span class="pc tu in"><span class="mn un gs jc zn">User</span> <span class="jc nn">{{user}}</span> </span><img src="{{ url_for('serve_static', filename='images/user.png') }}" width="50" height="50">
+                     </a>
+
+                  </div>
+               </div>
+            </div>
+         </header>
+         <main class="gv hm hv">
+            <div class="2xl:ud-p-11 bu sk">
+               <div class="yb ot 2xl:ud-mt-10">
+                  <h4 class="gs zn jn tn xb">Keywords</h4>
+                  <p class="mn kb qu">Add and View keywords
+                  <div class="rh bj ni nj wr xr">
+                     <div class="nf oh">
+                        <form method="post" action="{{ url_for('AddKeyword') }}">
+                        <div class="tk bj wr">
+                           <div class="-ud-mx-4 lc jg">
+                              <div class="yd wu/2 rl">
+                                 <label class="fb jc un zn gs">Add Keyword</label>
+                                    <div class="h">
+                                    <label class="fb jc un zn gs"></label>
+                                       <input type="text" placeholder="Add Keyword" name="keyword" id="keyword" class="yd qh ni bj yk an zn vo xo fr kr lr mr" required>
+                                       <span class="g j/2 x -ud-translate-y-1/2">
+                                          <i class="fa-regular fa-input-text"></i>
+                                       </span>
+                                    </div>
+                                    <p class="fb jc un zn gs" id="file_input_help">
+                                        {% with messages = get_flashed_messages(with_categories=true) %}
+                                        {% for category, message in messages %}
+                                          {% if category == "manual" %}
+                                            {{ message }}
+                                          {% endif %}
+                                        {% endfor %}
+                                      {% endwith %}                                
+                                    </p>
+                              </div>
+                              
+                              <div class="yd wu/2 rl">
+                                 <label class="fb jc un zn gs">⠀</label>
+                                 <div class="h">
+                                    <label class="fb jc un zn gs"></label>
+                                    <button type="submit" style="background-color: rgb(112 131 245/var(--tw-bg-opacity));padding-left: 2.75rem;padding-right: 2.75rem;padding-top: 9px;padding-bottom: 9px; font-weight: 500;font-size: 0.85rem;line-height: 1.37rem; color: rgb(255 255 255/var(--tw-text-opacity)); border-radius: .375rem;">Add</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        </form>
+                     </div>
+                  </div>
+<br>
+                  <div class="rh bj ni nj wr xr">
+                     <div class="nf oh">
+                        <form method="post" enctype="multipart/form-data" action="{{ url_for('UploadKeyword') }}">
+                        <div class="tk">
+                           <div class="-ud-mx-4 lc jg">
+                              <div class="yd wu/2 rl">
+                                 <div class="h">
+                                 <label class="fb jc un zn gs">Upload CSV File</label>
+                                    <input type="file" name="csvfile" id="csvfile" class="bj fr kr vp cr yd cg rh qi un vo xo mp op pp rp tp up wp yp zp dr lr mr" style="line-height: 0.85rem;" required>
+                                   <p class="fb jc un zn gs" id="file_input_help">
+                                    {% with messages = get_flashed_messages(with_categories=true) %}
+                                    {% for category, message in messages %}
+                                      {% if category == "upload" %}
+                                        {{ message }}
+                                      {% endif %}
+                                    {% endfor %}
+                                  {% endwith %}
+                                  
+
+                                   </p>
+                                 </div>
+                              </div>
+                              <div class="yd wu/2 rl">
+                                 <div class="h">
+                                 <label class="fb jc un zn gs">⠀</label>
+                                    <button type="submit" style="background-color: rgb(112 131 245/var(--tw-bg-opacity));padding-left: 2.75rem;padding-right: 2.75rem;padding-top: 9px;padding-bottom: 9px; font-weight: 500;font-size: 0.85rem;line-height: 1.37rem; color: rgb(255 255 255/var(--tw-text-opacity)); border-radius: .375rem;">Upload</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        </form>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="rh bj ni nj wr xr">
+                     <div class="nf oh">
+                        {% if keywords %}
+                        <table class='rh yd yf'>
+                            <tr class='vi bj wr'>
+                            <th class='rm sm ff sl'><p class='gs zn un gn'>Sno.</p></th>
+                            <th class='sl rl ff'><p class='gs zn un gn'>Keywords</p></th>
+                            <th class='sl rl ff'><p class='gs zn un gn'>Status</p></th>
+                            <th class='sl rl ff'><p class='gs zn un gn'></p></th>
+                            </tr>
+                            <tbody>
+                            {% for keyword in keywords %}
+                                {% set delete_link = url_for('DeleteKeyword', id=keyword[0]) %}
+                                {% set status = 'Processed' if keyword[0] <= val else '' %}
+
+                                <tr class='vi bj wr'>
+                                <td class='_l rm sm'><p>{{ loop.index }}</p></td>
+                                <td class='_l rl'><p>{{ keyword[1] }}</p></td>
+                                <td class='_l rl'><p>{{ status }}</p></td>
+                                <td class='_l rl'>
+                                    <p>
+                                    <a style='background-color: rgb(112 131 245/var(--tw-bg-opacity));
+                                            padding-left: 2.75rem; padding-right: 2.75rem; padding-top: 9px; padding-bottom: 9px;
+                                            font-weight: 500; font-size: 1rem; line-height: 1.5rem; color: rgb(255 255 255/var(--tw-text-opacity));
+                                            border-radius: .375rem;' href='{{ delete_link }}'>Delete</a>
+                                    </p>
+                                </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        {% else %}
+                        <p>0 results</p>
+                        {% endif %} 
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+      <script defer src="{{ url_for('serve_static', filename='js/bundle.js') }}"></script>
+   </body>
+</html>

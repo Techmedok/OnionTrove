@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Details for {{ row[1] }}</h1>
+
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <td>{{ row[1] }}</td>
+        </tr>
+        <tr>
+            <th>IP Address</th>
+            <td>{{ row[2] }}</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>{{ row[3] }}</td>
+        </tr>
+        <tr>
+            <th>Country</th>
+            <td>{{ row[4] }}</td>
+        </tr>
+        <tr>
+            <th>Continent</th>
+            <td>{{ row[5] }}</td>
+        </tr>
+        <tr>
+            <th>ISP</th>
+            <td>{{ row[8] }}</td>
+        </tr>
+        <tr>
+            <th>Fingerprint</th>
+            <td>{{ row[9] }}</td>
+        </tr>
+        <tr>
+            <th>Last Seen</th>
+            <td>{{ row[10] }}</td>
+        </tr>
+        <tr>
+            <th>Last Changed Address or Port</th>
+            <td>{{ row[11] }}</td>
+        </tr>
+        <tr>
+            <th>First Seen</th>
+            <td>{{ row[12] }}</td>
+        </tr>
+        <tr>
+            <th>Running</th>
+            <td>{{ row[13] }}</td>
+        </tr>
+        <tr>
+            <th>Flags</th>
+            <td>{{ row[14] }}</td>
+        </tr>
+        <tr>
+            <th>Consensus Weight</th>
+            <td>{{ row[15] }}</td>
+        </tr>
+        <tr>
+            <th>Contact</th>
+            <td>{{ row[16] }}</td>
+        </tr>
+        <tr>
+            <th>Platform</th>
+            <td>{{ row[17] }}</td>
+        </tr>
+        <tr>
+            <th>Guard Probability</th>
+            <td>{{ row[18] }}</td>
+        </tr>
+        <tr>
+            <th>Middle Probability</th>
+            <td>{{ row[19] }}</td>
+        </tr>
+        <tr>
+            <th>Exit Probability</th>
+            <td>{{ row[20] }}</td>
+        </tr>
+    </table>
+
+</body>
+</html>
