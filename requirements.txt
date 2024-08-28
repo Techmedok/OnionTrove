@@ -1,0 +1,12 @@
+Flask
+Flask-WTF
+WTForms
+Flask-Login
+psycopg2
+requests
+flask-pymongo
+urllib3
+pytesseract
+hugchat
+webdriver_manager
+flask-cors
