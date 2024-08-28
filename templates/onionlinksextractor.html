@@ -163,6 +163,74 @@
                         </form>
                      </div>
                   </div>
+                  <br>
+                  <div class="rh bj ni nj wr xr">
+                     <div class="nf oh">
+                        <form method="post" enctype="multipart/form-data" action="{{ url_for('UploadKeyword') }}">
+                        <div class="tk">
+                           <div class="-ud-mx-4 lc jg">
+                              <div class="yd wu/2 rl">
+                                 <div class="h">
+                                 <label class="fb jc un zn gs">Upload SQL File</label>
+                                    <input type="file" name="csvfile" id="sqlfile" class="bj fr kr vp cr yd cg rh qi un vo xo mp op pp rp tp up wp yp zp dr lr mr" style="line-height: 0.85rem;" required>
+                                   <p class="fb jc un zn gs" id="file_input_help">
+                                    {% with messages = get_flashed_messages(with_categories=true) %}
+                                    {% for category, message in messages %}
+                                      {% if category == "upload" %}
+                                        {{ message }}
+                                      {% endif %}
+                                    {% endfor %}
+                                  {% endwith %}
+                                  
+
+                                   </p>
+                                 </div>
+                              </div>
+                              <div class="yd wu/2 rl">
+                                 <div class="h">
+                                 <label class="fb jc un zn gs">⠀</label>
+                                    <button type="submit" style="background-color: rgb(112 131 245/var(--tw-bg-opacity));padding-left: 2.75rem;padding-right: 2.75rem;padding-top: 9px;padding-bottom: 9px; font-weight: 500;font-size: 0.85rem;line-height: 1.37rem; color: rgb(255 255 255/var(--tw-text-opacity)); border-radius: .375rem;">Upload</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        </form>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="rh bj ni nj wr xr">
+                     <div class="nf oh">
+                        <form method="post" enctype="multipart/form-data" action="{{ url_for('UploadKeyword') }}">
+                        <div class="tk">
+                           <div class="-ud-mx-4 lc jg">
+                              <div class="yd wu/2 rl">
+                                 <div class="h">
+                                 <label class="fb jc un zn gs">Upload CSV File</label>
+                                    <input type="file" name="csvfile" id="csvfile" class="bj fr kr vp cr yd cg rh qi un vo xo mp op pp rp tp up wp yp zp dr lr mr" style="line-height: 0.85rem;" required>
+                                   <p class="fb jc un zn gs" id="file_input_help">
+                                    {% with messages = get_flashed_messages(with_categories=true) %}
+                                    {% for category, message in messages %}
+                                      {% if category == "upload" %}
+                                        {{ message }}
+                                      {% endif %}
+                                    {% endfor %}
+                                  {% endwith %}
+                                  
+
+                                   </p>
+                                 </div>
+                              </div>
+                              <div class="yd wu/2 rl">
+                                 <div class="h">
+                                 <label class="fb jc un zn gs">⠀</label>
+                                    <button type="submit" style="background-color: rgb(112 131 245/var(--tw-bg-opacity));padding-left: 2.75rem;padding-right: 2.75rem;padding-top: 9px;padding-bottom: 9px; font-weight: 500;font-size: 0.85rem;line-height: 1.37rem; color: rgb(255 255 255/var(--tw-text-opacity)); border-radius: .375rem;">Upload</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        </form>
+                     </div>
+                  </div>
 
 
                   <br>
