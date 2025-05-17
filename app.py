@@ -29,21 +29,14 @@ class LoginForm(FlaskForm):
 
 app = Flask(__name__)
 CORS(app) #remove
-app.config['SECRET_KEY'] = 'wTtKKRfdpTilHBY4tkBH'
 
-app.config['MONGO_URI'] = 'mongodb://localhost:27017/OnionTrove'
 mongo = PyMongo()
 mongo.init_app(app)
 
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
-db_config = {
-    'dbname': 'oniontrove',
-    'user': 'oniontrove',
-    'password': 'wTtKKRfdpTilHBY4tkBH',
-    'host': '161.97.70.226',
-}
+
 
 connection = psycopg2.connect(**db_config)
 
