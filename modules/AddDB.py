@@ -1,11 +1,5 @@
 import psycopg2
 
-db_config = {
-    'dbname': 'oniontrove',
-    'user': 'oniontrove',
-    'password': 'wTtKKRfdpTilHBY4tkBH',
-    'host': '161.97.70.226',
-}
 
 connection = psycopg2.connect(**db_config)
 
